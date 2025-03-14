@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Mission: Edible Vegetables to Mars</title>
+  <style>
+    /* Modern Color Palette */
+    :root {
+      --space-blue: #0b3d91; /* Dark blue for space theme */
+      --teal: #2ec4b6; /* Teal for headings and highlights */
+      --soft-yellow: #ffd166; /* Yellow for accents */
+      --light-gray: #e0e0e0; /* Light gray for text */
+      --dark-gray: #2d2d2d; /* Dark gray for backgrounds */
+      --pure-white: #ffffff; /* White for contrast */
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: var(--space-blue);
+      color: var(--light-gray);
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px;
+      background-color: var(--dark-gray);
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    }
+
+    h1, h2, h3 {
+      color: var(--teal); /* Teal for headings */
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3em; /* Larger font size for main title */
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    h2 {
+      font-size: 2.2em; /* Slightly smaller for subheadings */
+      margin-top: 30px;
+    }
+
+    h3 {
+      font-size: 1.8em; /* Smaller for section headings */
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 1.2em; /* Slightly larger for readability */
+      color: var(--light-gray);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .highlight-1 {
+      color: var(--teal); /* Teal for highlights */
+      font-weight: bold;
+    }
+
+    .highlight-2 {
+      color: var(--soft-yellow); /* Yellow for secondary highlights */
+      font-weight: bold;
+    }
+
+    .highlight-3 {
+      color: #61dfff; /* Sky blue for tertiary highlights */
+      font-weight: bold;
+    }
+
+    .highlight-4 {
+      color: #ff61df; /* Pink for additional highlights */
+      font-weight: bold;
+    }
+
+    .formula {
+      font-family: "Courier New", Courier, monospace;
+      background-color: rgba(46, 196, 182, 0.2); /* Light teal background */
+      padding: 10px;
+      border-radius: 5px;
+      display: inline-block;
+      margin: 10px 0;
+      color: var(--teal);
+    }
+
+    .consequence {
+      color: #ff4444; /* Red for warnings */
+      font-weight: bold;
+    }
+
+    .takeaway {
+      background-color: rgba(46, 196, 182, 0.3); /* Teal background */
+      color: var(--light-gray);
+      padding: 20px;
+      border-radius: 15px;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .image-text {
+      background-color: rgba(46, 196, 182, 0.3); /* Teal background */
+      color: var(--light-gray);
+      padding: 20px;
+      border-radius: 15px;
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    ul li {
+      background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      color: var(--light-gray);
+    }
+
+    ul li::before {
+      content: "🚀"; /* Space-themed bullet */
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Space Mission: Transporting Only Edible Vegetables to Mars</h1>
+    <img src="C:\Users\iamaj\OneDrive\Desktop\Ajay_Edu\Courses\ML\Week5\Article_FP_FN\Space.jpg" alt="Spaceship with Vegetables" width="400" height="200">    
+    <h2>Scenario Overview</h2>
+    <p>You are running a space mission to Mars, where only <span class="highlight-1">fresh vegetables</span> are sent aboard the spaceship. A machine learning model inspects each vegetable before loading it onto the spaceship. The model classifies vegetables as either:</p>
+    <ul>
+      <li><span class="highlight-2">"Fresh"</span> (Good to send to Mars)</li>
+      <li><span class="highlight-3">"Rotten"</span> (Bad, should not be sent)</li>
+    </ul>
+
+    <h2>False Positives (FP) and False Negatives (FN)</h2>
+    <p>The model can make two types of mistakes:</p>
+    <ul>
+      <li><span class="highlight-1">False Positive (FP)</span> – A rotten vegetable is mistakenly classified as fresh.</li>
+      <li><span class="highlight-4">False Negative (FN)</span> – A fresh vegetable is mistakenly classified as rotten.</li>
+    </ul>
+
+    <h3>Consequences</h3>
+    <p><span class="consequence">False Positives (FP)</span> are worse than <span class="consequence">False Negatives (FN)</span> because:</p>
+    <ul>
+      <li>Sending rotten vegetables to Mars can cause <span class="highlight-2">food poisoning</span> and <span class="highlight-3">health risks</span> for astronauts.</li>
+      <li>Discarding fresh vegetables (FN) is wasteful but not dangerous.</li>
+    </ul>
+
+    <h2>Model Strategy & Evaluation Metrics</h2>
+    <p>To avoid sending rotten vegetables, we focus on <span class="highlight-1">high precision</span> rather than recall.</p>
+    <h3>Key Metrics</h3>
+    <ul>
+      <li><span class="highlight-2">Precision</span> – Ensures that only the freshest vegetables are sent to Mars.</li>
+      <div class="formula">Precision = TP / (TP + FP)</div>
+      <li><span class="highlight-3">Recall</span> – Lower priority. It’s okay to discard some fresh vegetables as long as we don’t send rotten ones.</li>
+      <div class="formula">Recall = TP / (TP + FN)</div>
+      <li><span class="highlight-4">F1 Score</span> – Used if we want a balance between precision and recall.</li>
+    </ul>
+
+    <h3>Accuracy?</h3>
+    <p>If 90% of vegetables are fresh, a lazy model could say “Fresh” all the time and be 90% accurate—but it would send rotten food to Mars! <span class="highlight-1">Accuracy is NOT the best metric here.</span></p>
+
+    <h2>Would You Sacrifice Accuracy?</h2>
+    <p>Yes! We should sacrifice accuracy to improve precision because sending rotten food (FP) is a bigger risk than throwing away fresh food (FN).</p>
+
+    <div class="takeaway">
+      <h3>Final Takeaways</h3>
+      <ul>
+        <li><span class="highlight-1">False Positives (FP)</span> = Rotten vegetables sent to Mars (Very Bad!)</li>
+        <li><span class="highlight-2">False Negatives (FN)</span> = Fresh vegetables thrown away (Less Bad)</li>
+        <li>Focus on <span class="highlight-3">HIGH PRECISION</span> to avoid FP.</li>
+        <li>Accuracy isn’t useful because the dataset is imbalanced.</li>
+        <li>Recall is secondary since astronauts prefer fewer vegetables over rotten ones.</li>
+      </ul>
+    </div>
+
+    <div class="image-text">
+      <h3>Focus on</h3>
+      <p><span class="highlight-1">False Positives (FP)</span> = Rotten vegetables sent to Mars (Very Bad!)</p>
+      <p><span class="highlight-2">False Negatives (FN)</span> = Fresh vegetables thrown away (Less Bad)</p>
+      <p>Focus on <span class="highlight-3">HIGH PRECISION</span> to avoid FP.</p>
+      <p>Accuracy isn’t useful because the dataset is imbalanced.</p>
+      <p>Recall is secondary since astronauts prefer fewer vegetables over rotten ones.</p>
+    </div>
+  </div>
+</body>
+</html>
